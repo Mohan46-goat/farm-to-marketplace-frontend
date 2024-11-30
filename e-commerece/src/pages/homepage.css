@@ -1,0 +1,123 @@
+/* Homepage Styles */
+.home-page {
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
+    background: linear-gradient(135deg, #D8F3DC 0%, #B7E4C7 100%);
+    color: #1B4332;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #2D6A4F 0%, #1B4332 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background: linear-gradient(135deg, #D8F3DC 0%, #B7E4C7 100%);
+    opacity: 0.1;
+    transition: all 0.5s;
+}
+
+.hero::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 100%;
+}
+
+.hero::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .cta-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: rgba(216, 243, 220, 0.2);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .cta-btn:hover {
+    background: rgba(216, 243, 220, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Products Section */
+.products-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, rgba(216, 243, 220, 0.7) 0%, rgba(183, 228, 199, 0.7) 100%);
+}
+
+.products-section h2 {
+    font-size: 2.5rem;
+    color: #1B4332;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .products-section h2 {
+        font-size: 2rem;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+}
