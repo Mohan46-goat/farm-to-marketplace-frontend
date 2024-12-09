@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiHelper = axios.create({
-    baseURL: 'http://localhost:5000', // Update with your backend URL
+    baseURL: 'https://farm-to-marketplace-backend.vercel.app/', // Update with your backend URL
     headers: {
         'Content-Type': 'application/json',
     },
@@ -16,3 +16,7 @@ apiHelper.interceptors.request.use((config) => {
 }, (error) => Promise.reject(error));
 
 export default apiHelper;
+
+
+// http://localhost:5000
+
