@@ -52,7 +52,7 @@ const ManageProducts = () => {
     <div className="container mt-4">
       <h2 className="text-center mb-4">Product Management</h2>
       
-      <div className="d-flex justify-content-end mb-4">
+      <div className="d-flex justify-content-center mb-4">
         <button 
           className="btn btn-primary"
 onClick={() => navigate('/admin/add-product')}

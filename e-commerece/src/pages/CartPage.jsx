@@ -64,7 +64,7 @@ const CartPage = () => {
 
     const handleClosePopup = () => {
         setShowSuccessPopup(false);
-        navigate('/'); // Redirect to home after closing popup
+        navigate('/home'); // Redirect to home after closing popup
     };
 
     if (cartItems.length === 0 && !showSuccessPopup) {
@@ -89,7 +89,7 @@ const CartPage = () => {
                         <img src={item.image} alt={item.name} className="cart-item-image" />
                         <div className="cart-item-details">
                             <h3>{item.name}</h3>
-                            <p className="price">${item.price}</p>
+                            <p className="price">Rs {item.price}</p>
                             <p className="description">{item.description}</p>
                         </div>
                         <div className="quantity-controls">
@@ -108,7 +108,7 @@ const CartPage = () => {
                                 +
                             </button>
                         </div>
-                        <p className="item-total">${(item.price * item.quantity).toFixed(2)}</p>
+                        <p className="item-total">Rs {(item.price * item.quantity).toFixed(2)}</p>
                         <button 
                             className="remove-item"
                             onClick={() => removeFromCart(item._id)}
@@ -119,14 +119,14 @@ const CartPage = () => {
                 ))}
             </div>
             <div className="cart-summary">
-                <h3>Cart Total: ${total.toFixed(2)}</h3>
+                <h3>Cart Total: Rs {total.toFixed(2)}</h3>
                 <button 
                     className="buy-now-button"
                     onClick={handleBuyNow}
                 >
                     {!user ? 'Login to Purchase' : 'Buy Now'}
                 </button>
-                <Link to="/" className="continue-shopping">Continue Shopping</Link>
+                <Link to="/home" className="continue-shopping">Continue Shopping</Link>
             </div>
         </div>
     );

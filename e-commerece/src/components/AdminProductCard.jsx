@@ -39,7 +39,7 @@ const AdminProductCard = ({ product, onDelete, onToggleMenu, isMenuActive }) => 
             <div className="product-info">
                 <h3>{product.name}</h3>
                 <p className="price">Rs{product.price}</p>
-                <p className="description">{product.subname}</p>
+                <p className="description">{product.description}</p>
                 <p className="stock">Stock: {product.quantity}</p>
             </div>
         </div>

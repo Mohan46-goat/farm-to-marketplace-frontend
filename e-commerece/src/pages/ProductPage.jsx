@@ -66,7 +66,7 @@ const ProductPage = () => {
                 <div className="product-info">
                     <h1>{product.name}</h1>
                     <p className="product-description">{product.description}</p>
-                    <div className="price">${product.price}</div>
+                    <div className="price">Rs{product.price}</div>
                     
                     <div className="quantity-selector">
                         <span>Quantity:</span>

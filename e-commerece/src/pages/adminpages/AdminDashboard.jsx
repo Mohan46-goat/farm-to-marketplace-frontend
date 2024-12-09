@@ -1,10 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaUserAlt, FaBox, FaSignOutAlt } from 'react-icons/fa';
+import { FaUserAlt, FaBox } from 'react-icons/fa';
 import './admin.css';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Custom logout function
+    localStorage.removeItem('token');
+    navigate('/');
+  }
 
   return (
     <div className="container-fluid">
@@ -35,10 +41,13 @@ const AdminDashboard = () => {
               </li>
             </ul>
             <div className="dropdown pb-4 mt-auto w-100">
-              <div className="admin-nav-item">
-                <FaSignOutAlt />
-                <span className="ms-2">Logout</span>
-              </div>
+              
+                {/* <FaSignOutAlt /> */}
+                <button onClick={handleLogout} className="dropdown-item admin-nav-item">
+                                        <i className="fas fa-sign-out-alt"></i>
+                                        Logout
+                                    </button>
+
             </div>
           </div>
         </div>

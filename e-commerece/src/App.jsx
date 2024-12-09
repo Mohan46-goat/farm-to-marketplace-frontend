@@ -12,6 +12,8 @@ import UpdateProductForm from './pages/adminpages/UpdateProductForm';
 import DeleteProductForm from './pages/adminpages/DeleteProductForm';
 import DeleteUserForm from './pages/adminpages/DeleteUserForm';
 import RegisterPage from './pages/RegisterPage';
+import CartPage from './pages/CartPage';
+import ProductPage from './pages/ProductPage';
 import './App.css';
 
 function App() {
@@ -67,6 +69,16 @@ function App() {
         <Route
           path="/home"
           element={user?.role === 'customer' ? <HomePage /> : <Navigate to="/login" />}
+        />
+
+        {/* Cart and Product Details Routes */}
+        <Route
+          path="/cart"
+          element={user?.role === 'customer' ? <CartPage /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/products/:id"
+          element={user?.role === 'customer' ? <ProductPage /> : <Navigate to="/login" />}
         />
 
         {/* Default Route */}

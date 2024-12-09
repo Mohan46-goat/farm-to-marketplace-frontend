@@ -78,6 +78,7 @@
   z-index: 1;
   opacity: 1;
   transition: opacity 0.3s ease;
+  background: white;
 }
 
 .admin-product-card .product-info h3 {
@@ -92,7 +93,7 @@
 }
 
 .admin-product-card .product-info .description {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 1rem 0;
 }
 
@@ -120,14 +121,14 @@
   top: 0;
   right: 0;
   border-radius: 0 15px 0 100%;
-  background-color: white;
+  background-color: #2D6A4F;
 }
 
 .admin-product-card::after {
   bottom: 0;
   left: 0;
   border-radius: 0 100% 0 15px;
-  background-color: white;
+  background-color: #2D6A4F;
 }
 
 .admin-product-card:hover::before,

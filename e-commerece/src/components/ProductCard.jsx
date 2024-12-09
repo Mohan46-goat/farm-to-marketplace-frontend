@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
         if (isHovered) {
             timer = setTimeout(() => {
                 setShowButtons(true);
-            }, 3000);
+            }, 800);
         } else {
             setShowButtons(false);
         }
@@ -60,7 +60,7 @@ const ProductCard = ({ product }) => {
             <div className="product-image-overlay"></div>
             <div className="product-info">
                 <h3>{product.name}</h3>
-                <p className="price">${product.price}</p>
+                <p className="price">Rs {product.price}</p>
                 <p className="description">{product.description}</p>
             </div>
             <div className={`product-buttons ${showButtons ? 'show' : ''}`}>
